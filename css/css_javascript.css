@@ -1,0 +1,16 @@
+/* _______________________________________________CSS/JAVASCRIPT_______________________________________ */
+
+/* ---------------CSS POUR LE HEADER AU MOMENT DU SCROLL */
+
+.menu {
+    position: fixed;
+    background-color: rgb(13, 28, 29);
+    box-shadow: 1px 1px 1px 1px beige;
+    transition: 0.5s;
+    height: 6%;
+    z-index: 999;
+}
+
+.sans_menu {
+    display: none;
+}

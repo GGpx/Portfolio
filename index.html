@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link rel="stylesheet" type="text/css" href="/css/css_javascript.css" />
-    <script src="../javaScript/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/css_javascript.css" />
+    <script src="javaScript/main.js"></script>
+    <script src="javaScript/create_comment.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Anton&&Nova+Flat" rel="stylesheet">
     <link rel="shortcut icon" href="../img/icon.png">
     <title>Portfolio</title>
@@ -32,7 +33,7 @@
                                                             ================================ -->
     <section id="section1">
 
-        <img src="../img/img_fond/fond2.jpg" alt="Image de fond" />
+        <img src="img/img_fond/fond2.jpg" alt="Image de fond" />
 
         <div id="titre_para_bouton">
             <h1 id="titre_section1">PORTFOLIO</h1>
@@ -58,7 +59,7 @@
 
         <div id="competences">
 
-            <img id="img_aside" src="../img/img_aside/img_aside2.jpg" alt="blablabla" />
+            <img id="img_aside" src="img/img_aside/img_aside2.jpg" alt="blablabla" />
 
             <div id="barre">
                 <p>HTML</p>
@@ -88,11 +89,11 @@
         <h2 id="titre_portfolio">Portfolio</h2>
 
         <div id="bloc_projet">
-            <a class="hvr-grow-shadow" href="#"><img class="img_projet" src="../img/img/image-placeholder-300x300.jpg"
+            <a class="hvr-grow-shadow" href="../G_G-Template/site/index.html"><img class="img_projet" src="img/img/image-placeholder-300x300.jpg"
                     alt="#"></a>
-            <a class="hvr-grow-shadow" href="#"><img class="img_projet" src="../img/img/image-placeholder-300x300.jpg"
+            <a class="hvr-grow-shadow" href="../Blog/index.php"><img class="img_projet" src="img/img/image-placeholder-300x300.jpg"
                     alt="#"></a>
-            <a class="hvr-grow-shadow" href="#"><img class="img_projet" src="../img/img/image-placeholder-300x300.jpg"
+            <a class="hvr-grow-shadow" href="../Princess-Template/site_mobile/index.html"><img class="img_projet" src="img/img/image-placeholder-300x300.jpg"
                     alt="#"></a>
         </div>
         <div id="para_projet">
@@ -109,36 +110,34 @@
     </section>
 
     <!-- ==============================
-                                        SECTION 3 / CONTACT 
+                                        SECTION 3 / CONTACT
                                                             ========================-->
     <section id="section_contact">
 
         <h2 id="titre_section_contact">Contactez-moi</h2>
 
         <div id="bloc_form">
-            <form id="formulaire_section_contact" action="/action_page.php">
+            <form id="formulaire_section_contact" method="POST" action="ajax/php/comment.php">
 
                 <div id="formulaire">
                     <div class="champs_formulaire champs">
                         <label for="name">Nom et Prénom :</label>
-                        <input type="text" id="name" name="name" placeholder="Votre Nom et Prénom..">
+                        <input type="text" id="nom_prenom" name="name" placeholder="Votre Nom et Prénom.." >
                     </div>
 
                     <div class="champs_formulaire champs">
                         <label for="mail">Mail :</label>
-                        <input type="text" id="mail" name="mail" placeholder="votremail@mail.fr">
+                        <input type="text" id="mail" name="mail" placeholder="votremail@mail.fr" >
                     </div>
 
                     <div class="champs_formulaire champs champ_textarea">
                         <label for="message">Message :</label>
-                        <textarea id="message" name="message" placeholder="Entrez votre message ici" cols="70" rows="10"></textarea>
+                        <textarea id="commentaire" name="message" placeholder="Entrez votre message ici" cols="70" rows="10"></textarea>
                     </div>
 
-                    <a href="#">
-                        <div id="bouton_formulaire" class="champs_formulaire">
-                            <p id="para_bouton">Envoyer</p>
-                        </div>
-                    </a>
+                    <div id="bouton_formulaire" class="champs_formulaire">
+                        <input type="submit" id="para_bouton" value="Envoyer" onclick="createComment()">
+                    </div>
                 </div>
             </form>
 
@@ -146,7 +145,7 @@
 
 
         <!-- ===============================
-                                            FOOTER  
+                                            FOOTER
                                                     ================================ -->
         <footer>
             <div id="mes_infos">

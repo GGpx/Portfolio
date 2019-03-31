@@ -1,3 +1,13 @@
-@media (min-width : 1280px){
-    
+@media (max-width: 375px) {
+    #nav_header{
+        display: none;   
+    }
+
+    #titre_header{
+        font-size: 2em;
+    }
+
+    #titre_section1{
+        font-size: 1em;
+    }
 }

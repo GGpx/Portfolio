@@ -1,13 +1,4 @@
-/* COULEUR UTILISER PAR RAPPORT A L'IMAGE */
-
-/*
-color: rgb(56, 77, 81);
-color: rgb(13, 28, 29);
-color: rgb(13, 28, 29);
-color: rgb(113, 106, 106);
-*/
-
-/* BODY */
+/* RESET */
 
 * {
     margin: 0;
@@ -16,18 +7,19 @@ color: rgb(113, 106, 106);
     scroll-behavior: smooth;
 }
 
+/* POUR TOUT LES LIENS */
 a {
     text-decoration: none;
     color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-body {
-    width: 100%;
+/* POUR TOUT LES PARAGRAPHES */
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* _____________________________________________HEADER_____________________________________________ */
-
-/* --------------HEADER */
 
 header {
     position: absolute;
@@ -39,14 +31,13 @@ header {
 }
 
 /* ---------TITRE HEADER (Jérémy) */
-
 #titre_header {
     font-size: 1.5em;
     color: beige;
     text-decoration: none;
     margin-top: 0.7%;
-    /* margin-left: 2%; */
     text-shadow: 2px 2px 2px black;
+    font-family: none;
 }
 
 #titre_header:hover {
@@ -54,16 +45,12 @@ header {
     text-shadow: 2px 2px 2px black;
 }
 
-/* -------------NAVIGATION */
-
+/* -------------MENU DE NAVIGATION */
 #nav_header {
-    width: 26%;
-    /* margin-right: 2%; */
+    width: 32%;
     margin-top: 1.3%;
     text-shadow: 2px 2px 2px black;
 }
-
-/* ------------LISTE HEADER*/
 
 #list_header {
     display: flex;
@@ -71,17 +58,14 @@ header {
     justify-content: space-around;
 }
 
-/* ---------------LISTE NAV*/
-
 .li_nav {
     list-style-type: none;
 }
 
-/* --------------LIENS NAV*/
-
 .lien_nav {
     text-decoration: none;
     color: beige;
+    font-family: none;
 }
 
 .lien_nav:hover {
@@ -92,48 +76,44 @@ header {
 /* ___________________________________________SECTION 1 / HOME___________________________________________ */
 
 #section1 {
-    background-color: rgb(56, 77, 81);
+    background-image: url("../img/img_fond/fond2.jpg");
+    background-size: cover;
+    background-position: center;
     width: auto;
-    height: 940px;
+    height: 890px;
 }
 
-#section1>img {
-    width: 100%;
+/* ---------------DIV AVEC LE TITRE / LE PARAGRAPHE / LE BOUTON POUR DESCENDRE */
+#titre_para_bouton {
     height: 100%;
-}
-
-/* DIV DE LA SECTION HOME */
-#titre_para_bouton{
-    height: 100%;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    bottom: 100%;
 }
 
 /* --------------------------------TITRE1 */
-
 #titre_section1 {
     font-family: 'Anton', sans-serif;
     text-shadow: 2px 2px 2px black;
     color: beige;
     font-size: 5em;
     letter-spacing: 0.8em;
-    padding-bottom: 1%;
+    margin-bottom: 2%;
+    padding-left: 4%;
 }
 
 /* -------------------PARAGRAPHE */
-
 #para_section1 {
     color: beige;
     padding-bottom: 1%;
     width: 30%;
+    text-align: center;
+    font-family: none;
 }
 
-/* ----------------Bouton sous titre*/
-
+/* ----------------BOUTON POUR DESCENDRE*/
 #bouton_section1 {
     background-color: beige;
     border: 2px solid rgb(53, 53, 53);
@@ -153,22 +133,24 @@ header {
 }
 
 /* ---------------LIENS DU BOUTON */
-
 #lien_bouton {
     height: 100%;
     text-decoration: none;
     color: grey;
 }
 
-/* ___________________________________________ABOUT ME / ASIDE___________________________________________ */
+#lien_bouton:hover {
+    color: black;
+}
 
+
+/* ___________________________________________COMPéTENCES___________________________________________ */
 aside {
     background: linear-gradient(rgb(56, 77, 81), rgb(158, 164, 171));
     padding-top: 10%;
 }
 
-/* -------------------Titre aside */
-
+/* -------------------TITRE DES COMPéTENCES */
 #titre_aside {
     text-align: center;
     font-size: 2.8em;
@@ -178,25 +160,15 @@ aside {
 }
 
 /*  ---------------PARAGRAPHE ABOUT ME */
-
 #para_about {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 4%;
     margin-bottom: 5%;
+    font-size: 1.2em;
+    color: beige;
 }
 
 /*-------------------- POSITIONNEMENT DE L'IMAGE ET DES BARRES DE PROGRESSION  */
-
-/* IMAGE */
-
-#img_aside {
-    width: 50%;
-    height: 50%;
-    border-radius: 100px;
-}
-
-/* -----------------LES BARRES DE PROGRESSION */
-
 #competences {
     display: flex;
     flex-direction: row;
@@ -206,6 +178,14 @@ aside {
     margin-left: 1%;
 }
 
+/* -----------------IMAGE */
+#img_aside {
+    width: 50%;
+    height: 50%;
+    border-radius: 100px;
+}
+
+/* -----------------LES BARRES DE PROGRESSION */
 .barre_de_progression {
     margin: 5%;
     width: 500px;
@@ -244,39 +224,32 @@ aside {
 }
 
 /* -----------------LES DIFFERENTES BARRES DE PROGRESSION */
-
 /* BARRE HTML */
-
 #barre_html:before {
-    width: 200px;
+    width: 300px;
 }
 
 /* BARRE CSS */
-
 #barre_css:before {
-    width: 140px;
+    width: 250px;
 }
 
 /* BARRE JAVASCRIPT */
-
 #barre_javascript:before {
-    width: 80px;
+    width: 100px;
 }
 
 /* BARRE PHP */
-
 #barre_php:before {
     width: 25px;
 }
 
 /* BARRE MYSQL */
-
 #barre_mysql:before {
     width: 25px;
 }
 
 /* ______________________________________________PORTFOLIO___________________________________________________ */
-
 #section_portfolio {
     background-image: linear-gradient(rgb(158, 164, 171), rgb(67, 86, 97));
     height: 573px;
@@ -285,7 +258,6 @@ aside {
 }
 
 /* ---------------------------TITRE PORTFOLIO */
-
 #titre_portfolio {
     text-align: center;
     text-shadow: 2px 2px 2px black;
@@ -295,7 +267,6 @@ aside {
 }
 
 /* ----------------------------BLOC DE PROJET */
-
 #bloc_projet {
     display: flex;
     flex-direction: row;
@@ -304,8 +275,7 @@ aside {
     padding-right: 2.5%;
 }
 
-/* ----------------------------------------------------Liens Des IMG */
-
+/* ------------------------------------POUR LE HOVER DES PROJETS DU PORTFOLIO */
 .hvr-grow-shadow {
     display: inline-block;
     vertical-align: middle;
@@ -318,7 +288,9 @@ aside {
     transition-property: box-shadow, transform;
 }
 
-.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+.hvr-grow-shadow:hover,
+.hvr-grow-shadow:focus,
+.hvr-grow-shadow:active {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
     /* -webkit-transform: scale(1.1); */
     transform: scale(1.1);
@@ -326,14 +298,14 @@ aside {
 }
 
 /* -----------------------IMAGE PROJET */
-
 .img_projet {
     padding: 5%;
     border-radius: 10%;
+    width: 350px;
+    height: 300px;
 }
 
 /* ------------------------PARAGRAPHE PROJET */
-
 #para_projet {
     display: flex;
     flex-direction: row;
@@ -348,32 +320,17 @@ aside {
 }
 
 /* ________________________________________________CONTACT___________________________________________________ */
-
-/* -----------------------------------------SECTION */
-
 #section_contact {
-    background: url('../img/img/img_route2.jpg');
-    background-size: 100% 100%;
-    padding-top: 10%;
-    padding-bottom: 9%;
+    background-image: url('../img/img/img_route2.jpg');
+    background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background: linear-gradient(rgb(158, 164, 171) , rgb(56, 77, 81) ); */
+    padding-bottom: 10%;
 }
 
-/* ---------------------------------------IMAGE DE LA SECTION CONTACT */
-
-#contact_section_contact>#img_section_contact {
-    width: 100%;
-    height: 100%;
-}
-
-/* -----------------------TITRE section_contact */
-
+/* -----------------------TITRE CONTACT */
 #titre_section_contact {
+    padding-top: 10%;
     text-align: center;
     text-shadow: 2px 2px 2px black;
     color: beige;
@@ -381,24 +338,16 @@ aside {
     font-family: sans-serif;
 }
 
-/* ----------------------------------Bloc du formulaire */
-
+/* ----------------------------------DIV DU FORMULAIRE */
 #bloc_form {
-    width: 70%;
-    height: 100%;
-    margin-top: 5%;
-}
-
-/* Formulaire */
-
-#formulaire_section_contact {
+    height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-/* -----------------------------------CHAMPS DE SAISIE */
-
+/* -----------------------------------CHAMPS DES INPUT */
 .champs {
     box-shadow: 0px 0px 10px 10px lightgrey;
     height: 18%;
@@ -413,71 +362,94 @@ aside {
     margin-top: 6%;
     padding-top: 5%;
     width: 800px;
-    /* height: 18%; */
     border-radius: 5px;
 }
 
-input {
+
+/* --------------------INPUT TYPE TEXT */
+input[type="text"] {
     padding: 1%;
     margin: 1%;
     width: 80%;
     background-color: rgba(211, 211, 211, 0.808);
     border: 2px solid rgba(13, 28, 29, 0.685);
+    border-radius: 5px;
 }
 
-.champ_textarea{
-    height: 40%;
-}
-
-textarea{
+/* ---------------------TEXTAREA */
+textarea {
     resize: none;
     margin: 2%;
     background-color: rgba(211, 211, 211, 0.808);
     border: 2px solid rgba(13, 28, 29, 0.685);
-}
-
-/* ---------------BOUTON SUBMIT */
-
-#bouton_formulaire {
-    padding-top: 0;
-    width: 20%;
-    height: 10%;
-    margin-left: 40%;
     border-radius: 5px;
 }
 
-#bouton_formulaire:hover {
-    background-color: rgba(211, 211, 211, 0.808);
-    box-shadow: 0px 0px 5px 5px lightgrey;
+.champ_textarea {
+    height: 40%;
 }
 
-#para_bouton {
-    width: 100%;
-    height: 100%;
+/* ---------------BOUTON SUBMIT */
+#bouton_formulaire {
+    margin-top: 5%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-/* ________________________________________________FOOTER__________________________________________________ */
-
-/* ---------------FOOTER */
-
-footer {
-    position: relative;
-    top: 200px;
-    width: 100%;
-    height: 100%;
-    margin-top: 10%;
-    background-color: rgba(252, 252, 247, 0.726);
-    box-shadow: 5px 10px 10px 5px lightgrey;
+input[type="submit"] {
+    border-radius: 5px;
+    width: 20%;
+    height: 50px;
+    background-color: rgba(211, 211, 211, 0.808);
+    border: 2px solid rgba(13, 28, 29, 0.685);
 }
 
-/* ------------------INFORMATION */
+/* ----------------PARAGRAPHE DU BOUTON DU FORMULAIRE */
+#p_bouton_formulaire {
+    color: rgb(88, 88, 88);
+}
 
+#p_bouton_formulaire:hover {
+    box-shadow: 0px 0px 10px 5px lightgrey;
+    color: black;
+}
+
+
+/* ________________________________________________FOOTER__________________________________________________ */
+footer {
+    background-color: rgba(196, 196, 196, 0.808);
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------------BLOC DES DIV DES INFORMATION */
 #mes_infos {
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+}
+
+/* ----------------DIV DES INFORMATION */
+.infos_footer {
+    box-shadow: 5px 10px 10px 0px rgb(155, 155, 155);
+    border-radius: 10px;
+    background-color: rgba(158, 164, 171, 0.404);
+    padding: 1%;
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(13, 28, 29, 0.685);
+}
+
+.infos_footer>a {
+    width: 100%;
+    text-align: center;
 }
